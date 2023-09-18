@@ -2,12 +2,7 @@ const HlsClient = require('./hls-client');
 const TrayServer = require('./tray-server');
 const { EventEmitter } = require('events');
 const fs = require('fs');
-
-const readJsonFile = (filePath) => { 
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
-
-  return JSON.parse(fileContent.replace(/\\\\/g, '\\'));
-}
+const config = require('./config.json');
 
 const writeJsonFile = (filePath, data) => {
   const fileContent = JSON.stringify(data);
@@ -62,9 +57,6 @@ const main = async (opts) => {
   await hlsClient.fireAndForgetRequest(opts.RequestType, opts.RequestData);
 };
 
-const inputFilePath = process.argv[2];
-const inputs = readJsonFile(inputFilePath);
+console.log("Inputs Provided", config);
 
-console.log("Inputs Provided", inputs);
-
-main(inputs);
+main(config);
