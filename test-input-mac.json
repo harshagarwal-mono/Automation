@@ -1,7 +1,7 @@
 {
     "TrayEndPoint": "/Users/singhg/Library/Application Support/Monotype Fonts/.sockets/Tray/41de7be0",
     "HlsEndPoint": "/Users/singhg/Library/Application Support/Monotype Fonts/.sockets/Hls/41de7be0",
-    "OutputFilePath": "./data.json",
+    "OutputFilePath": "/Users/singhg/PycharmProjects/pythonProject1/Automation/data.json",
     "RequestType": "LoginStatusRequest",
     "RequestData": {"locale":"en"}
 }
