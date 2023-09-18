@@ -6,7 +6,7 @@ const fs = require('fs');
 const readJsonFile = (filePath) => { 
   const fileContent = fs.readFileSync(filePath, 'utf-8');
 
-  return JSON.parse(fileContent);
+  return JSON.parse(fileContent.replace(/\\\\/g, '\\'));
 }
 
 const writeJsonFile = (filePath, data) => {
@@ -49,10 +49,10 @@ const main = async (opts) => {
   const relay = new EventEmitter();
 
   const trayServer = new TrayServer(relay, {
-      endPoint: opts.TrayEndPoint.replace(/\\\\/g, '\\'),
+      endPoint: opts.TrayEndPoint,
   });
   const hlsClient = new HlsClient({
-      endPoint: opts.HlsEndPoint.replace(/\\\\/g, '\\'),
+      endPoint: opts.HlsEndPoint,
   });
 
   addEventListeners(relay, opts.OutputFilePath);
