@@ -26,6 +26,8 @@ const PrintEventsToJsonFile = (filePath, {
   };
 
   writeJsonFile(filePath, event);
+
+  process.exit(0);
 }
 
 const addEventListeners = (relay, filePath) => {
