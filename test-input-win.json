@@ -1,6 +1,6 @@
 {
-    "TrayEndPoint": "\\\\.\\pipe\\singhg-Tray-41de7be",
-    "HlsEndPoint": "\\\\.\\pipe\\singhg-Hls-41de7be",
+    "TrayEndPoint": "\\\\.\\pipe\\singhg-Tray-41de7be0",
+    "HlsEndPoint": "\\\\.\\pipe\\singhg-Hls-41de7be0",
     "OutputFilePath": "C:\\Users\\singhg\\PycharmProjects\\pythonProject1\\Automation\\data.json",
     "RequestType": "LoginStatusRequest",
     "RequestData": {"locale":"en"}
