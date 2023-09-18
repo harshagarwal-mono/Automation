@@ -22,7 +22,7 @@ const PrintEventsToJsonFile = (filePath, {
   const event = {
     type,
     data,
-    timestamp: Date.now(),
+    timestamp: new Date(Date.now()).toLocaleString(),
   };
 
   writeJsonFile(filePath, event);
