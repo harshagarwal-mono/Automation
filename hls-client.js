@@ -31,7 +31,6 @@ class HlsClient {
 
             this.clientFireAndForget.FireAndForget(message, (error) => {
                 if (error) {
-                    this.handleError(error);
                     reject(error);
                     return;
                 }
