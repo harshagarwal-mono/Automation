@@ -8,11 +8,9 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH);
 const elevationProto = grpc.loadPackageDefinition(packageDefinition);
 
 class HlsClient {
-    constructor(opts) {
-        this.endPoint = opts.endPoint;
-       
+    constructor(opts) {       
         this.clientFireAndForget = new elevationProto.FireAndForget(
-            `unix:${opts.ConnectionEndPoint}`,
+            `unix:${opts.endPoint}`,
             grpc.credentials.createInsecure()
         );
     }

@@ -33,10 +33,10 @@ class GrpcServer {
 
     init() {
         if (process.platform === 'darwin') {
-            const dirName = path.dirname(endPoint);
+            const dirName = path.dirname(this.endPoint);
     
-            if (fs.existsSync(endPoint)) {
-                fs.rmSync(endPoint);
+            if (fs.existsSync(this.endPoint)) {
+                fs.rmSync(this.endPoint);
             }
     
             if (!fs.existsSync(dirName)) {
