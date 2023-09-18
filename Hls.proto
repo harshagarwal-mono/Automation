@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service FireAndForget {
+    rpc FireAndForget (FireAndForgetRequest) returns (FireAndForgetResponse);
+}
+
+message FireAndForgetRequest {
+    string type = 1;
+    string data = 2;
+}
+
+message FireAndForgetResponse {  
+}
