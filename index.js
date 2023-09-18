@@ -49,10 +49,10 @@ const main = async (opts) => {
   const relay = new EventEmitter();
 
   const trayServer = new TrayServer(relay, {
-      endPoint: opts.TrayEndPoint,
+      endPoint: opts.TrayEndPoint.replace(/\\\\/g, '\\'),
   });
   const hlsClient = new HlsClient({
-      endPoint: opts.HlsEndPoint,
+      endPoint: opts.HlsEndPoint.replace(/\\\\/g, '\\'),
   });
 
   addEventListeners(relay, opts.OutputFilePath);
